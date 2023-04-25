@@ -95,14 +95,14 @@ const Analysis = () => {
           notAttempt={notAttempt}
         />
       </div>
-      <div className="flex justify-between">
+      <div className="w-5/6 flex flex-col md:flex-row items-center md:justify-between">
         <div>
           <PieChart
             details={[
               { correct: aboutResponse?.correct },
               { wrong: aboutResponse?.wrong },
               { skipped: aboutResponse?.skipped },
-              { skipped: aboutResponse?.skipped },
+              { notAttempt: aboutResponse?.skipped },
             ]}
           />
         </div>

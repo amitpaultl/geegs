@@ -14,7 +14,7 @@ const SpiderChart = ({ topicsDetails }) => {
   //   const data= topicsDetails?.map
   return (
     <div>
-      <ResponsiveContainer width={400} height={400}>
+      <ResponsiveContainer width={300} height={300}>
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={topicsDetails}>
           <PolarGrid />
           <PolarAngleAxis dataKey="topicName" />
