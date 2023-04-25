@@ -1,0 +1,24 @@
+h1.nameAss {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.0737px;
+}
+
+label.titleSub {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0491px;
+    display: block;
+}
+
+.assesstestA input[type='radio'] {
+    visibility: hidden;
+}
+
+
+.textpart {
+    width: 350px;
+    margin: auto;
+}

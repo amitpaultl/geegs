@@ -1,0 +1,78 @@
+h2.upcomming {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 21.9429px;
+    margin-top: 40px;
+}
+
+.videoUrl {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    padding: 32px 15px;
+}
+
+.videoUrl h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #282828;
+    margin-bottom: 17px;
+}
+
+.sectionVideo h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #282828;
+}
+
+.sectionVideo a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    color: #282828;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.figma {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 35px 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+
+.videtab .react-tabs__tab-list li {
+    margin-right:48px;
+ }
+ 
+ .videtab .react-tabs__tab-list  {
+     border: none;
+     margin-right:48px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     color: rgba(48, 48, 48, 0.6);
+ 
+ }
+ 
+ .videtab .react-tabs__tab--selected{
+     color: #303030;
+     border: none;
+ }

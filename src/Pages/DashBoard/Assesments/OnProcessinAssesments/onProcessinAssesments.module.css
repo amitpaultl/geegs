@@ -1,0 +1,198 @@
+/* for the ec ques no  */
+.questionNo {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .selectedBtn {
+  -webkit-box-shadow: inset 0 0 30px rgb(13, 102, 1);
+  -moz-box-shadow: inset 0 0 30px rgb(13, 102, 1);
+  box-shadow: inset 0 0 30px rgb(13, 102, 1);
+} */
+.questionNo :hover {
+  cursor: pointer;
+}
+.unSeenUnMarked {
+  /* background-color: rgb(225, 252, 219); */
+  /* background-color: rgb(255, 145, 145); */
+  border: 0.573921px solid #333333;
+}
+.checkedMarked {
+  background-color: #9DDDAB;
+  border: 4px solid black;
+}
+.checkedUnMarked {
+  background-color: #9DDDAB;
+}
+.seenMarked {
+  background-color: rgb(227, 228, 210);
+  border: 4px solid black;
+}
+.seenUnMarked {
+  background-color: #F6BBBB;
+}
+
+/* for the action  */
+.clickBtn button {
+  /* background: #f4f4f4; */
+  border-radius: 4px;
+  border: none;
+  padding: 13px 20px 13px 38px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.clickBtn {
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+
+/* for the header  */
+
+.resultBtn button {
+  background: #f4f4f4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px 30px;
+  color: #333333;
+  border: none;
+}
+
+.resultBtn {
+  text-align: right;
+}
+
+/* for question options  */
+
+.eachChoices {
+  background: #f4f4f4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.quesChoices input[type="radio"]:checked {
+  background-color: #4cb08f;
+  width: 24px;
+  height: 24px;
+  border: 6px solid #4cb08f;
+}
+
+.quesChoices input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #d9d9d9;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  /* margin-right: 38px; */
+  background-color: #d9d9d9;
+}
+.quesChoices input[type="checkbox"]:checked {
+  background-color: #4cb08f;
+  width: 24px;
+  height: 24px;
+  border: 6px solid #4cb08f;
+}
+
+.quesChoices input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #d9d9d9;
+  /* border-radius: 50%; */
+  width: 24px;
+  height: 24px;
+  /* margin-right: 38px; */
+  background-color: #d9d9d9;
+}
+
+
+/*  */
+
+.questionTitle {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.9967px;
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+h1.questionNo {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.6244px;
+  margin-bottom: 43px;
+}
+
+.questionAss {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18.7259px;
+  line-height: 167%;
+  margin-bottom: 48px;
+}
+
+form.quesChoices.inline-block input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #E1E1E1;
+  border-radius: 50%;
+  width: 24px;
+  height: 23px;
+  margin-right: 38px;
+  background-color: #E1E1E1;
+  outline: none ! important
+}
+
+.quesChoices input[type="radio"]:checked {
+  background-color: #27DC69 !important;
+  width: 24px;
+outline: none ! important;
+  height: 24px;
+  border: 6px solid #E1E1E1 ! important;
+  background-image:none !important
+}
+
+
+/* Assessment  css*/
+
+
+
+.submitBut{
+  text-align: right;
+}
+
+.submitBut button {
+  padding: 5px 49px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22.0305px;
+  background: rgba(8, 130, 52, 0.7);
+  border-radius: 11.0152px;
+  color: #fff;
+}
+
+
+.assessmentQuestionCount {
+  margin-top: 31px;
+  margin-bottom: 60px;
+  background: #FFFFFF;
+  border-radius: 18.886px;
+  filter: drop-shadow(0px 2.29568px 2.29568px rgba(0, 0, 0, 0.25));
+  padding: 18px 0;
+  width: 360px;
+}
