@@ -95,3 +95,15 @@ button.nextBtu {
   background-color: #27DC69;
   color: #fff;
 }
+
+.menuSub li a img.show {
+  display: none !important;
+}
+
+.menuSub li:hover img.show {
+  display: inline-block !important;
+}
+
+.menuSub li:hover img.hide {
+  display: none;
+}

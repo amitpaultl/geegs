@@ -3,13 +3,20 @@ import style from "./dashboard.module.css";
 import { useEffect, useState } from "react";
 import control from "../../assets/dashBoardIcon/control.png";
 import logo from "../../assets/dashBoardIcon/logo.png";
+import { RiHome5Line } from "react-icons/ri";
 import h1 from "../../assets/Testimg/h1.svg";
 import h2 from "../../assets/Testimg/h2.svg";
 import h3 from "../../assets/Testimg/h3.svg";
 import h4 from "../../assets/Testimg/h4.svg";
 import h5 from "../../assets/Testimg/h5.svg";
 import h6 from "../../assets/Testimg/h12.svg";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import g1 from "../../assets/Testimg/g1.svg";
+import g2 from "../../assets/Testimg/g2.svg";
+import g3 from "../../assets/Testimg/g3.svg";
+import g4 from "../../assets/Testimg/g4.svg";
+import g5 from "../../assets/Testimg/g5.svg";
+import g6 from "../../assets/Testimg/g6.svg";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 const DashBoard = () => {
   const [open, setOpen] = useState(true);
   const Menus = [
@@ -54,15 +61,15 @@ const DashBoard = () => {
         }}
         className={`${!open && "hidden"} md:block  ${open && " bg-white rounded-md"
           } ${style.dashboardHeight
-          } h-screen p-5  pt-8 md:relative absolute duration-300 z-[1000] `}
+          } ${style.menubox} p-5  menubox pt-8 md:relative absolute duration-300 z-[1000] `}
       >
-        {/* <img
+        <img
           src={control}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
           alt=""
-        /> */}
+        />
         <div className="flex gap-x-4 items-center ">
 
           <h1
@@ -72,31 +79,54 @@ const DashBoard = () => {
             Dashboard
           </h1>
         </div>
-        <ul className="pt-6 font-poppins">
-          {Menus.map((Menu, index) => (
-            <li key={index} className="mb-5">
-              <Link
-                to={Menu?.link}
-                className={`flex  rounded-md p-2 cursor-pointer hover:wh text-black text-sm items-center gap-x-4 
-              ${"mt-2"} ${currentPath.startsWith(Menu?.link)
-                    ? "bg-white shadow-lg dd"
-                    : "bg-white "
-                  } `}
-              >
-                <img src={Menu.src} alt="" className=" w-5" />
-                <span
-                  className={`${!open && "hidden"
-                    } origin-left font-bold duration-200`}
-                >
-                  {Menu.title}
-                </span>
-              </Link>
+        <ul className={`pt-6 font-poppins menuSub ${style.menuSub}`}>
+          
+
+            <li  className="mb-5">
+              <NavLink to={'/'}>
+              <img className="show" src={g1} alt="" />
+                <img  className="hide" src={h1} alt="" />Home
+              </NavLink>
             </li>
-          ))}
+            <li  className="mb-5">
+              <NavLink to={'/dashboard/courses'}>
+              <img className="show" src={g2} alt="" />
+
+                <img src={h2}  className="hide" alt="" /> Courses
+              </NavLink>
+            </li>
+            <li  className="mb-5">
+              <NavLink to={'/dashboard/assessment'}>
+              <img className="show" src={g3} alt="" />
+
+                <img src={h3}  className="hide" alt="" /> Test
+              </NavLink>
+            </li>
+            <li  className="mb-5">
+              <NavLink to={'/dashboard/analysis'}>
+              <img className="show" src={g4} alt="" />
+
+                <img  className="hide" src={h4} alt="" /> Analysis 
+              </NavLink>
+            </li>
+            <li  className="mb-5">
+              <NavLink to={'/dashboard/practice'}>
+              <img className="show" src={g5} alt="" />
+
+                <img  className="hide" src={h5} alt="" /> Practice
+              </NavLink>
+            </li>
+            <li  className="mb-5">
+              <NavLink to={'/dashboard/admin-pannel'}>
+              <img className="show" src={g6} alt="" />
+
+                <img  className="hide" src={h6} alt="" /> Admin
+              </NavLink>
+            </li>
         </ul>
       </div>
       {/* h-screen  */}
-      <div className="grow    relative h-full">
+      <div className="grow    relative ">
         <div style={{ display: `${shouldHiddenNav ? "none" : "block"}` }}>
 
         </div>

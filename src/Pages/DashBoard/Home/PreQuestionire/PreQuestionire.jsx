@@ -117,7 +117,7 @@ const PreQuestionire = () => {
     >
       <div>
         {/* header */}
-        <h1 className="nameAss">welcome khalid ?</h1>
+        <h1 className="nameAss text-center md:text-left">welcome khalid ?</h1>
       </div>
 
 
@@ -125,7 +125,7 @@ const PreQuestionire = () => {
         <div>
           {/* show te user greetings  */}
 
-          <div className="w-[500px] mx-auto">
+          <div className="w-[280px]  sm:w-[300px] md:w-[500px] lg-[600px] mx-auto">
 
             {/* indepth to go the next question  */}
             <div>
@@ -134,8 +134,8 @@ const PreQuestionire = () => {
                 <label className="titleSub text-center mb-5">
                   Are you Currently Studying ?
                 </label>
-                <div className="flex justify-between">
-                  <div className="flex items-center">
+                <div className=" md:flex md:justify-between">
+                  <div className="md:flex md:items-center">
 
                     <label htmlFor="isStudying" className="ml-2">
                       <input
@@ -150,10 +150,10 @@ const PreQuestionire = () => {
                         name="isStudying"
                         value="true"
                       />
-                      <img src={student} alt="" />
+                      <img src={student} className="md:mx-0 mx-auto" alt="" />
                     </label>
                   </div>
-                  <div className="flex items-center">
+                  <div className="md:flex md:items-center">
 
                     <label htmlFor="isNotStudying" className="ml-2">
                       <input
@@ -168,7 +168,7 @@ const PreQuestionire = () => {
                         name="isStudying"
                         value="false"
                       />
-                      <img src={student2} alt="" />
+                      <img className="md:mx-0 mx-auto" src={student2} alt="" />
                     </label>
                   </div>
                 </div>
@@ -188,8 +188,8 @@ const PreQuestionire = () => {
                     }`}
                 >
                   <label className="titleSub text-center mb-5">Are you currently ?</label>
-                  <div className="flex justify-between">
-                    <div className="flex items-center ">
+                  <div className="md:flex md:justify-between">
+                    <div className="md:flex md:items-center ">
 
                       <label htmlFor="schoolStudent" className="ml-2">
                         <input
@@ -204,10 +204,10 @@ const PreQuestionire = () => {
                           name="workAs"
                           value="schoolStudent"
                         />
-                        <img src={school} alt="" />
+                        <img className="md:mx-0 mx-auto" src={school} alt="" />
                       </label>
                     </div>
-                    <div className="flex items-center">
+                    <div className="md:flex md:items-center">
 
                       <label htmlFor="collageStudent" className="ml-2">
                         <input
@@ -222,7 +222,7 @@ const PreQuestionire = () => {
                           name="workAs"
                           value="collageStudent"
                         />
-                        <img src={school2} alt="" />
+                        <img className="md:mx-0 mx-auto" src={school2} alt="" />
                       </label>
                     </div>
                   </div>
@@ -241,8 +241,8 @@ const PreQuestionire = () => {
                 >
                   <label className="titleSub text-center mb-5">Are you currently?</label>
 
-                  <div className="flex justify-between">
-                    <div className="flex items-center ">
+                  <div className="md:flex md:justify-between">
+                    <div className="md:flex md:items-center ">
 
                       <label htmlFor="jobSeeker" className="ml-2">
                         <input
@@ -257,10 +257,10 @@ const PreQuestionire = () => {
                           name="workAs"
                           value="jobSeeker"
                         />
-                        <img src={looking} alt="" />
+                        <img className="md:mx-0 mx-auto" src={looking} alt="" />
                       </label>
                     </div>
-                    <div className="flex items-center ">
+                    <div className="md:flex md:items-center ">
 
                       <label htmlFor="jobHolder" className="ml-2">
                         <input
@@ -275,7 +275,7 @@ const PreQuestionire = () => {
                           name="workAs"
                           value="jobHolder"
                         />
-                        <img src={job} alt="" />
+                        <img className="md:mx-0 mx-auto" src={job} alt="" />
                       </label>
                     </div>
                   </div>
@@ -295,12 +295,12 @@ const PreQuestionire = () => {
                   : "hidden"
                   }`}
               >
-                <div className="my-2 mb-5">
+                <div className="my-2 mb-5 ">
                   <label className="titleSub" htmlFor="schoolName">
                     School Name
                   </label>
                   <input
-                    className="block h-8 rounded-md w-full"
+                    className="block h-8 rounded-md md:w-full"
                     {...register("schoolName", {
                       required: {
                         value: true,
@@ -335,7 +335,7 @@ const PreQuestionire = () => {
                       name="grade"
                       id="grade"
                       defaultValue="any"
-                      className="block w-full grow h-8 py-0 rounded-md ml-2"
+                      className="block md:w-full grow h-8 py-0 rounded-md ml-2"
                     >
                       <option value="any" disabled>
                         Grade ?
@@ -393,7 +393,7 @@ const PreQuestionire = () => {
                       name="coLLageName"
                       type="search"
                       id="coLLageName"
-                      className="block w-full  h-8 rounded-md px-2 focus:ring-green-400 focus:border-green-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="block md:w-full  h-8 rounded-md px-2 focus:ring-green-400 focus:border-green-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Search"
                     />
 
@@ -449,7 +449,7 @@ const PreQuestionire = () => {
                       name="latestDegree"
                       id="latestDegree"
                       defaultValue="any"
-                      className="block w-full grow h-8 rounded-md ml-2 py-0"
+                      className="block md:w-full grow h-8 rounded-md ml-2 py-0"
                     >
                       <option value="any" disabled>
                         latest Degree ?
@@ -485,7 +485,7 @@ const PreQuestionire = () => {
                       name="graduationYear"
                       id="graduationYear"
                       defaultValue="any"
-                      className="block grow w-full h-8 rounded-md ml-2 py-0"
+                      className="block grow md:w-full h-8 rounded-md ml-2 py-0"
                     >
                       <option value="any" disabled>
                         graduation Year ?
@@ -539,7 +539,7 @@ const PreQuestionire = () => {
                     type="text"
                     name="companyName"
                     id="companyName"
-                    className="block w-full h-8 rounded-md "
+                    className="block md:w-full h-8 rounded-md "
                   />
                   {errors?.companyName && (
                     <p role="alert" className="text-red-500 font-bold">
@@ -566,7 +566,7 @@ const PreQuestionire = () => {
                       name="yearsOfExperience"
                       id="yearsOfExperience"
                       defaultValue="any"
-                      className="block w-full h-8 grow rounded-md ml-2 py-0"
+                      className="block md:w-full h-8 grow rounded-md ml-2 py-0"
                     >
                       <option value="any" disabled>
                         years Of Experience ?
@@ -611,7 +611,7 @@ const PreQuestionire = () => {
                       name="currentJobTitle"
                       id="currentJobTitle"
                       defaultValue="any"
-                      className="block w-full grow h-8 rounded-md ml-2 py-0"
+                      className="block md:w-full grow h-8 rounded-md ml-2 py-0"
                     >
                       <option value="any" disabled>
                         Occupation ?
@@ -645,7 +645,7 @@ const PreQuestionire = () => {
         {/* footer */}
         {/* here is thee submit button  */}
         <button
-          className="button bg-green-400 hover:bg-green-500 rounded-md font-bold text-black text-xl px-4 py-2 w-full"
+          className="button bg-green-300 hover:bg-green-400 rounded-md font-bold text-black text-xl px-4 py-2 w-full"
           type="submit"
           onClick={() => setShouldShowSelectError(true)}
         >

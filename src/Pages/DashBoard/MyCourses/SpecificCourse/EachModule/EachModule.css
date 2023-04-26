@@ -22,7 +22,7 @@
     margin-bottom: 28px;
 }
 
-.timeCurs button {
+.timeCurs a {
     background: #E8E8E8;
     border-radius: 11px;
     font-family: 'Poppins';
@@ -41,7 +41,7 @@ h2.upcomming {
     margin-top: 40px;
 }
 
-.timeCurs button.activezoom{
+.timeCurs a.activezoom{
     background: #49B3FF;
     color: #fff;
 }

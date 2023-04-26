@@ -18,4 +18,46 @@
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   } */
 }
+.menubox{
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+.menuSub li a img {
+  width: 20px;
+}
 
+.menuSub li{
+  padding: 16px 22px;
+}
+
+.menuSub li a {
+  display: flex;
+  gap: 17px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  
+}
+
+.menuSub li a img.show {
+  display: none !important;
+}
+
+
+
+.menuSub li:hover {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #4BA25D;
+  background: #FFFFFF;
+  box-shadow: -1px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 16px 22px;
+}
+
+.menuSub img.show {
+  display: none;
+}
