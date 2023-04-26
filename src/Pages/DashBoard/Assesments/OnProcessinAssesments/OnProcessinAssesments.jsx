@@ -535,6 +535,7 @@ const OnProcessinAssesments = () => {
         <div className="grid grid-cols-12 gap-1 lg:gap-6">
           <div className="col-span-12 lg:col-span-4">
             <AssessmentHead
+              takenTimeToFinish={takenTimeToFinish}
               assessment={assessment}
               questions={questions}
               selectedQuestion={selectedQuestion}

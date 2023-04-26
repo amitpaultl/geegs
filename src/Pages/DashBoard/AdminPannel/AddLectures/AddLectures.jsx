@@ -48,6 +48,27 @@ const AddLectures = () => {
               )}
             </div>
             <div className='addLecture'>
+              <label>BatchId</label>
+              <input
+                type='text'
+                // required
+                name='lectureName'
+                {...register("lectureName", {
+                  required: "Lecture Name is required",
+                })}
+                aria-invalid={errors.lectureName ? "true" : "false"}
+                // onChange={handleInputChange}
+              />
+              {errors.lectureName && (
+                <p
+                  className='text-red-500 font-poppins font-medium'
+                  role='alert'
+                >
+                  {errors.lectureName?.message}
+                </p>
+              )}
+            </div>
+            <div className='addLecture'>
               <label>Instructor Name</label>
               <input
                 // required

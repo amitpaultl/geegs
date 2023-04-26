@@ -16,6 +16,7 @@ const AssessmentHead = ({
   selectTheSelectedQuestionIndexWithIndex,
   setChosenAnswers,
   chosenAnswers,
+  takenTimeToFinish
 }) => {
   const [isMarke, setIsMark] = useState(true);
   const [extraTime, setExtraTime] = useState(0);
@@ -74,7 +75,9 @@ const AssessmentHead = ({
           isPlaying
           duration={assessment?.duration * 60}
           // colors="#3DC86F"
-          colors={`${duration && duration <=300?'red':'#3DC86F'}`}
+          // colors={`${(assessment?.duration * 60 - takenTimeToFinish) <=300?'red':'#3DC86F'}`}
+          colors={['#3DC86F','#fc5656', '#FF0000']}
+          colorsTime={[300,200, 0]}
           strokeWidth="16"
           onUpdate={(remainingTime) => children(remainingTime)}
         >
