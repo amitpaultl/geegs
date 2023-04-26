@@ -14,18 +14,19 @@ const AddLectures = () => {
     console.log(data);
   };
   // function for dynamic file selection
-  const [fileType, setFileType] = useState("");
+  // const [fileType, setFileType] = useState("");
 
-  const handleFileTypeChange = (event) => {
-    const selectedFileType = event.target.value;
-    setFileType(selectedFileType);
-  };
+  // const handleFileTypeChange = (event) => {
+  //   const selectedFileType = event.target.value;
+  //   setFileType(selectedFileType);
+  // };
   // function for dynamic file selection
   return (
     <div className='container p-8'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className=' font-poppins font-medium'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            {/* Lecture Name */}
             <div className='addLecture'>
               <label>Lecture Name</label>
               <input
@@ -47,56 +48,157 @@ const AddLectures = () => {
                 </p>
               )}
             </div>
+            {/* Lecture Name */}
+            {/* Topic Name */}
             <div className='addLecture'>
-              <label>BatchId</label>
+              <label>Topic Name</label>
               <input
                 type='text'
                 // required
-                name='lectureName'
-                {...register("lectureName", {
-                  required: "Lecture Name is required",
+                name='topicName'
+                {...register("topicName", {
+                  required: "Topic Name is required",
                 })}
-                aria-invalid={errors.lectureName ? "true" : "false"}
+                aria-invalid={errors.topicName ? "true" : "false"}
                 // onChange={handleInputChange}
               />
-              {errors.lectureName && (
+              {errors.topicName && (
                 <p
                   className='text-red-500 font-poppins font-medium'
                   role='alert'
                 >
-                  {errors.lectureName?.message}
+                  {errors.topicName?.message}
                 </p>
               )}
             </div>
+            {/* Topic Name */}
+            {/* Batch Name */}
             <div className='addLecture'>
-              <label>Instructor Name</label>
+              <label htmlFor='batchName'>Batch Name</label>
+              <select name='batchName' {...register("batchName",{
+                  required: "Batch Name is required",
+              })}
+              aria-invalid={errors.batchName ? "true" : "false"}
+                className='w-full border-2 border-green-400 rounded-xl'>
+                <option value=''>Choose a Batch</option>
+                <option value='Batch-001'>Batch-001</option>
+                <option value='Batch-002'>Batch-002</option>
+                <option value='Batch-003'>Batch-003</option>
+              </select>
+              {errors.batchName && (
+                <p
+                  className='text-red-500 font-poppins font-medium'
+                  role='alert'
+                >
+                  {errors.batchName?.message}
+                </p>
+              )}
+            </div>
+            {/* Batch Name */}
+            {/* Course Name */}
+            <div className='addLecture'>
+              <label htmlFor='courseName'>Course Name</label>
+              <select name="courseName"
+              {...register("courseName",{
+                required: "Course Name is required",
+            })}
+            aria-invalid={errors.courseName ? "true" : "false"}
+                className='w-full border-2 border-green-400 rounded-xl'>
+                <option value=''>Choose a Course</option>
+                <option value='Python'>Python</option>
+                <option value='DataScience'>Data Science</option>
+                <option value='CodingChamps'>Coding Champs</option>
+              </select>
+              {errors.courseName && (
+                <p
+                  className='text-red-500 font-poppins font-medium'
+                  role='alert'
+                >
+                  {errors.courseName?.message}
+                </p>
+              )}
+            </div>
+            {/* Course Name */}
+            {/* Sceduled At */}
+            <div className='addLecture'>
+              <label>Sceduled At</label>
               <input
                 // required
-                type='text'
-                name='instructorName'
+                type='datetime-local'
+                name='sceduledAt'
                 // onChange={handleInputChange}
-                {...register("instructorName", {
-                  required: "Provide Instructor Name",
+                {...register("sceduledAt", {
+                  required: "Select A Date",
                 })}
-                aria-invalid={errors.instructorName ? "true" : "false"}
+                aria-invalid={errors.sceduledAt ? "true" : "false"}
               />
-              {errors.instructorName && (
+              {errors.sceduledAt && (
                 <p
                   role='alert'
                   className='text-red-500 font-poppins font-medium'
                 >
-                  {errors.instructorName?.message}
+                  {errors.sceduledAt?.message}
                 </p>
               )}
             </div>
-          </div>
-
-          <div className='col-span-12 md:col-span-6'>
+            {/* Sceduled At */}
+            {/* Ends At */}
             <div className='addLecture'>
-              <label>Video Title</label>
+              <label>Ends At</label>
               <input
                 // required
-                type='text'
+                type='datetime-local'
+                name='endsAt'
+                // onChange={handleInputChange}
+                {...register("endsAt", {
+                  required: "Select A Date",
+                })}
+                aria-invalid={errors.endsAt ? "true" : "false"}
+              />
+              {errors.endsAt && (
+                <p
+                  role='alert'
+                  className='text-red-500 font-poppins font-medium'
+                >
+                  {errors.endsAt?.message}
+                </p>
+              )}
+            </div>
+            {/* Ends At */}
+            {/* Attachment File */}
+            <div class='w-full font-poppins'>
+              <label
+                class='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+                for='file_input'
+              >
+                Upload file
+              </label>
+              <input
+                class='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400'
+                id='fileInput'
+                name='fileInput'
+                type='file'
+                {...register("fileInput", {
+                  required: "File is required",
+                })}
+                aria-invalid={errors.fileInput ? "true" : "false"}
+              />
+              {errors.fileInput && (
+                <p
+                  role='alert'
+                  className='text-red-500 font-poppins font-medium'
+                >
+                  {errors.fileInput?.message}
+                </p>
+              )}
+            </div>
+            {/* Attachment File */}
+            {/* Zoom Link */}
+            <div className='addLecture'>
+              <label>Zoom Link</label>
+              <input
+                // required
+                type='url'
                 name='videoTitle'
                 // onChange={handleInputChange}
                 {...register("videoTitle", {
@@ -113,48 +215,40 @@ const AddLectures = () => {
                 </p>
               )}
             </div>
+            {/* Zoom Link */}
+            {/* Upload Video */}
+            <div class='w-full font-poppins'>
+              <label
+                class='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+                for='file_input'
+              >
+                Upload Video
+              </label>
+              <input
+                class='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400'
+                id='fileInput'
+                name='fileInput'
+                type='file'
+                accept='.mp4'
+                {...register("fileInput", {
+                  required: "File is required",
+                })}
+                aria-invalid={errors.fileInput ? "true" : "false"}
+              />
+              {errors.fileInput && (
+                <p
+                  role='alert'
+                  className='text-red-500 font-poppins font-medium'
+                >
+                  {errors.fileInput?.message}
+                </p>
+              )}
+            </div>
+            {/* Upload Video */}
           </div>
         </div>
         {/* Select File type */}
-        <div className='addLecture'>
-          <label htmlFor='file-input'>Select a file:</label>
-          <select
-            onChange={handleFileTypeChange}
-            className='w-full border-2 border-green-400 rounded-xl'
-          >
-            <option value=''>Choose a file type</option>
-            <option value='.pdf'>PDF</option>
-            <option value='.pptx'>PowerPoint/PPTX</option>
-            <option value='.mp4'>Video</option>
-          </select>
-          {fileType && (
-            <div className='my-4'>
-              <div class='flex w-64 items-center justify-center bg-grey-lighter'>
-                <label class='w-64 flex flex-col items-center px-4 py-6 bg-green-400 text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white'>
-                  <svg
-                    class='w-8 h-8'
-                    fill='currentColor'
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 20 20'
-                  >
-                    <path d='M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z' />
-                  </svg>
-                  <span class='mt-2 text-base leading-normal'>
-                    {`Select a ${fileType} file`}
-                  </span>
-
-                  <input
-                    className='addLecture hidden'
-                    id='file-input'
-                    name='file-input'
-                    type='file'
-                    accept={fileType}
-                  />
-                </label>
-              </div>
-            </div>
-          )}
-        </div>
+        <div className='addLecture'></div>
         {/* Select File type */}
 
         {/* Text Area */}
