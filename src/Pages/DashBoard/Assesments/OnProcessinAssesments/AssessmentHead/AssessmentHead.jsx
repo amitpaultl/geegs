@@ -3,6 +3,7 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import style from "../onProcessinAssesments.module.css";
 import EachQuesNo from "./EachQuesNo/EachQuesNo";
 import Timer from "./Timer/Timer";
+import { duration } from "moment";
 const AssessmentHead = ({
   setTakenTimeToFinish,
   assessment,
@@ -15,6 +16,7 @@ const AssessmentHead = ({
   selectTheSelectedQuestionIndexWithIndex,
   setChosenAnswers,
   chosenAnswers,
+  takenTimeToFinish
 }) => {
   const [isMarke, setIsMark] = useState(true);
   const [extraTime, setExtraTime] = useState(0);
@@ -68,11 +70,14 @@ const AssessmentHead = ({
   return (
     <div>
       {/* 1st portion */}
-      <div className="flex justify-center items-center mt-3">
+      <div className="flex justify-center items-center mt-3 font-poppins font-medium">
         <CountdownCircleTimer
           isPlaying
           duration={assessment?.duration * 60}
-          colors="#3DC86F"
+          // colors="#3DC86F"
+          // colors={`${(assessment?.duration * 60 - takenTimeToFinish) <=300?'red':'#3DC86F'}`}
+          colors={['#3DC86F','#b9ff78','#ffff78','#ff6d24', '#FF0000']}
+          colorsTime={[300,270,240,210,0]}
           strokeWidth="16"
           onUpdate={(remainingTime) => children(remainingTime)}
         >
