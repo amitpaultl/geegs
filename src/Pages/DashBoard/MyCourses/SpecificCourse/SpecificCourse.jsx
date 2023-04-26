@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 const SpecificCourse = () => {
   const modules = [
-    { moduleName: "Html", Language: "English" },
-    { moduleName: "Html", Language: "English" },
-    { moduleName: "Html", Language: "English" },
-    { moduleName: "Html", Language: "English" },
+    { moduleName: "Html", Language: "English", videourl :"https://vimeo.com/tompeyrat/gaucho" },
+    { moduleName: "Html", Language: "English", videourl :"https://vimeo.com/tompeyrat/gaucho" },
+    { moduleName: "Html", Language: "English", videourl :"https://vimeo.com/tompeyrat/gaucho" },
+    { moduleName: "Html", Language: "English", videourl :"https://vimeo.com/tompeyrat/gaucho" },
   ];
   return (
     <div>
@@ -34,16 +34,14 @@ const SpecificCourse = () => {
               <h3>HTML :  HTML Advanced Tutorial </h3>
               <p>Language : English</p>
             </div>
-            <button className="activezoom">Zoom</button>
+            <Link target={"_blank"} to={'https://meet.google.com/afk-iedz-jhk?authuser=0'} className="activezoom">Zoom</Link>
           </div>
         </div>
 
 
 
       </div>
-      <div>
-        <Link to="/dashboard/courses/module">go to specific module page</Link>
-      </div>
+    
     </div>
   );
 };

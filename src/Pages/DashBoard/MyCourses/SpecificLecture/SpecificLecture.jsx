@@ -8,18 +8,37 @@ import './SpecificLecture.css'
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import figma from '../../../../assets/Testimg/figma.svg'
+import Section from "./Section";
+import SpecificVideo from "./SpecificVideo";
 
 const SpecificLecture = () => {
 
+  // video url
+  const [videourl, setVideourl]= useState('https://vimeo.com/tompeyrat/gaucho')
 
   const videoData = [
     {
       singleData: [
-        { title: 'Using The Paint Brush sing The Paint Brush' },
-        { title: 'Paint Using The Paint ' },
-        { title: ' Brush sing The Paint Brush' },
+        { title: 'Using The Paint Brush sing The Paint Brush', videoLink :  'https://vimeo.com/tompeyrat/gaucho'},
+        { title: 'Paint Using The Paint ', videoLink :  'https://vimeo.com/801818003' },
+        { title: ' Brush sing The Paint Brush', videoLink :  'https://vimeo.com/805412923' },
       ]
     },
+    {
+      singleData: [
+        { title: 'Using The Paint Brush sing The Paint Brush', videoLink :  'https://vimeo.com/tompeyrat/gaucho'},
+        { title: 'Paint Using The Paint ', videoLink :  'https://vimeo.com/801818003' },
+        { title: ' Brush sing The Paint Brush', videoLink :  'https://vimeo.com/805412923' },
+      ]
+    },
+    {
+      singleData: [
+        { title: 'Using The Paint Brush sing The Paint Brush', videoLink :  'https://vimeo.com/tompeyrat/gaucho'},
+        { title: 'Paint Using The Paint ', videoLink :  'https://vimeo.com/801818003' },
+        { title: ' Brush sing The Paint Brush', videoLink :  'https://vimeo.com/805412923' },
+      ]
+    },
+
   ]
 
   return (
@@ -30,7 +49,7 @@ const SpecificLecture = () => {
         <div className="hello col-span-3">
 
           <ReactPlayer
-            url='https://vimeo.com/tompeyrat/gaucho'
+            url={videourl}
             className='react-player'
             playing
             width= "100%"
@@ -56,17 +75,49 @@ const SpecificLecture = () => {
               </TabList>
 
               <TabPanel>
-                <p>Do you want to learn Figma but don’t know where to start? Well, if you follow this step-by-step tutorial, it will only take you 24 minutes to learn all the basics you need to know to start designing apps and websites in Figma.  In this Figma tutorial for beginners, UX designer Amr guides you through Figma’s interface and tools following a very valuable principle to start mastering this tool. “If you want to learn the basics, you should copy other designs”.  Do you have more questions about Figma or the next steps you should take? Leave them in the comments below ⬇️  ✅ If you want to learn about facilitation and workshopping join our FREE FACILITATION COMMUNITY where hundreds of workshop facilitators gather to share their resources, insights and experiences 👉 </p>
+                <p>Do you want to learn Figma but don’t know where to start? Well, if you follow this step-by-step tutorial, it will only take you 24 minutes to learn all the basics you need to know to start designing apps and websites in Figma.In this Figma tutorial for beginners, UX designer Amr guides you through Figma’s interface and tools following a very valuable principle to start mastering this tool. “If you want to learn the basics, you should copy other designs”.Do you have more questions about Figma or the next steps you should take? Leave them in the comments below ⬇️✅ If you want to learn about facilitation and workshopping join our FREE FACILITATION COMMUNITY where hundreds of workshop facilitators gather to share their resources, insights and experiences 👉 </p>
 
-                <h3>Discussion</h3>
+                <div className="discount">
+                  <h3>Discussion</h3>
 
                 <form >
                   <input type="text" />
                 </form>
+                </div>
+                
 
               </TabPanel>
               <TabPanel>
-                <h2>Any content 2</h2>
+                <div className="warBox">
+                <div className="nameAssement">
+                      <p>Name</p>
+                      <p>Progress  </p>
+                    </div>
+                  <div className="singleAssment " >
+                    
+                    <div className="AssmentCss">
+                      <p>CSS : Pyspark Evaluation</p>
+                      <p>Date: 17 Apr, Time: 10:00 pm - 12 pm</p>
+                    </div>
+                    <button>In process</button>
+                  </div>
+                  <div className="singleAssment " >
+                    
+                    <div className="AssmentCss">
+                      <p>CSS : Pyspark Evaluation</p>
+                      <p>Date: 17 Apr, Time: 10:00 pm - 12 pm</p>
+                    </div>
+                    <button className="green">Completed</button>
+                  </div>
+                  <div className="singleAssment " >
+                    
+                    <div className="AssmentCss">
+                      <p>CSS : Pyspark Evaluation</p>
+                      <p>Date: 17 Apr, Time: 10:00 pm - 12 pm</p>
+                    </div>
+                    <button  className="green">Completed</button>
+                  </div>
+                </div>
               </TabPanel>
             </Tabs>
 
@@ -76,18 +127,10 @@ const SpecificLecture = () => {
         <div className="videoUrl">
           <h3>Course content</h3>
 
-          <div className="sectionVideo">
-            <h4>Section 2</h4>
-            <Link>1 Using The Paint Brush sing The Paint Brush</Link>
-          </div>
-          <div className="sectionVideo">
-            <h4>Section 3</h4>
-            <Link>1 Using The Paint Brush sing The Paint Brush</Link>
-          </div>
-          <div className="sectionVideo">
-            <h4>Section 4</h4>
-            <Link>1 Using The Paint Brush sing The Paint Brush</Link>
-          </div>
+          {
+            videoData?.map((section,i) =><Section urlVideo={setVideourl} number={i} sector={section} key={i}></Section> )
+          }          
+          
         </div>
 
       </div>

@@ -10,33 +10,31 @@ const Courses = () => {
       <div>
         <div className={`${style.contain}`}>
           {/* we hav to use each courses  */}
-          <div className="grid md:grid-cols-1 lg:grid-cols-3  gap-5 pt-4 px-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 pt-4 px-5">
             <div className= {`${style.singleCourse}`}>
               <img src={courseimg} alt="" />
               <h2>Css</h2>
-              <Link to={''}>Start Learn</Link>
+              <Link to={'/dashboard/courses/course'}>Start Learn</Link>
             </div>
             <div className={`${style.singleCourse}`}>
               <img src={courseimg} alt="" />
               <h2>Css</h2>
-              <Link to={''}>Start Learn</Link>
+              <Link to={'/dashboard/courses/course'}>Start Learn</Link>
             </div>
             <div className={`${style.singleCourse}`}>
               <img src={courseimg} alt="" />
               <h2>Css</h2>
-              <Link to={''}>Start Learn</Link>
+              <Link to={'/dashboard/courses/course'}>Start Learn</Link>
             </div>
             <div className={`${style.singleCourse}`}>
               <img src={courseimg} alt="" />
               <h2>Css</h2>
-              <Link to={''}>Start Learn</Link>
+              <Link to={'/dashboard/courses/course'}>Start Learn</Link>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <Link to="/dashboard/courses/course">go to specific course page</Link>
-      </div>
+       
     </div>
   );
 };

@@ -76,3 +76,79 @@ h2.upcomming {
      color: #303030;
      border: none;
  }
+
+ button.urlVideo:hover {
+    color: #4FB5FF;
+    font-weight: 500;
+}
+button.urlVideo {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    color: #282828;
+    margin-bottom: 10px;
+}
+
+.nameAssement {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+.nameAssement p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19.8095px;
+}
+
+.AssmentCss p {font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 32px;}
+
+.singleAssment {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E4E4E4;
+    padding-bottom: 28px;
+}
+
+.AssmentCss {
+    margin-top: 17px;
+}
+
+.warBox {
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    padding: 22px 66px;
+}
+
+.singleAssment button {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.discount h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 44px;
+    margin-bottom: 22px;
+}
+
+.discount input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.discount {
+    margin-bottom: 40px;
+}
+
+button.green {
+    color: #27DC69;
+}
