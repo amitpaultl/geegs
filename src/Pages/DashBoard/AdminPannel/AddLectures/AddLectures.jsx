@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "./AddLecture.css";
+import style from "./AddLecture.module.css"
 const AddLectures = () => {
   const {
     register,
@@ -25,7 +25,7 @@ const AddLectures = () => {
         <div className=' font-poppins font-medium'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             {/* Lecture Name */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label>Lecture Name</label>
               <input
                 type='text'
@@ -48,7 +48,7 @@ const AddLectures = () => {
             </div>
             {/* Lecture Name */}
             {/* Topic Name */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label>Topic Name</label>
               <input
                 type='text'
@@ -71,7 +71,7 @@ const AddLectures = () => {
             </div>
             {/* Topic Name */}
             {/* Batch Name */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label htmlFor='batchName'>Batch Name</label>
               <select
                 name='batchName'
@@ -97,7 +97,7 @@ const AddLectures = () => {
             </div>
             {/* Batch Name */}
             {/* Course Name */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label htmlFor='courseName'>Course Name</label>
               <select
                 name='courseName'
@@ -123,7 +123,7 @@ const AddLectures = () => {
             </div>
             {/* Course Name */}
             {/* Sceduled At */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label>Sceduled At</label>
               <input
                 // required
@@ -146,7 +146,7 @@ const AddLectures = () => {
             </div>
             {/* Sceduled At */}
             {/* Ends At */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label>Ends At</label>
               <input
                 // required
@@ -197,7 +197,7 @@ const AddLectures = () => {
             </div>
             {/* Attachment File */}
             {/* Zoom Link */}
-            <div className='addLecture'>
+            <div className={style?.addLecture}>
               <label>Zoom Link</label>
               <input
                 // required
