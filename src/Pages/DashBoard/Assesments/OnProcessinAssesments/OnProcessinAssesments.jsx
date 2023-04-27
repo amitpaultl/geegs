@@ -589,27 +589,31 @@ const OnProcessinAssesments = () => {
               <div className="flex flex-col px-2 gap-2   h-full">
                 <div>
                   {/* header */}
-                  Submitting now ?
+                  <h3 className="text-2xl text-center font-poppins font-medium">Test Summery</h3>
                 </div>
                 <div className="px-2">
                   <div className="border-slate-300 rounded-lg border-2 "></div>
                 </div>
 
                 <div className=" grow">
-                  <h1>
-                    You have answer {chosenAnswers?.length} out of{" "}
-                    {totalQuestions}
+                  <h1 className="flex items-center justify-between font-poppins text-xl font-normal">
+                    {/* You have answer {chosenAnswers?.length} out of{" "}
+                    {totalQuestions} */}
+                   <div> Number of Question:</div> <div>{totalQuestions}</div>
                   </h1>
-                  <h1>
-                    You have seen {seenQuestionId?.length} out of{" "}
-                    {totalQuestions}
+                  <h1 className="flex items-center justify-between font-poppins text-xl font-normal">
+                    {/* You have seen {seenQuestionId?.length} out of{" "}
+                    {totalQuestions} */}
+                    <div>Answered:</div> <div>{chosenAnswers?.length}</div>
                   </h1>
-                  <h1>You have marked {isMarkedQuestionId?.length}</h1>
+                  {/* <h1>You have marked {isMarkedQuestionId?.length}</h1> */}
+                  <h1 className="flex items-center justify-between font-poppins text-xl font-normal"><div>Marked :</div> <div>{isMarkedQuestionId?.length}</div> </h1>
                   {/* remainingTime */}
-                  <h1>you have completed on remainingTime</h1>
-                  <h1>
-                    You have skipped {questions?.length - chosenAnswers?.length}{" "}
-                    out of {totalQuestions}
+                  {/* <h1>you have completed on remainingTime</h1> */}
+                  <h1 className="flex items-center justify-between font-poppins text-xl font-normal">
+                    {/* You have skipped {questions?.length - chosenAnswers?.length}{" "}
+                    out of {totalQuestions} */}
+                    <div>Skipped :</div> <div>{questions?.length - chosenAnswers?.length}</div>
                   </h1>
                 </div>
 
